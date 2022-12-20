@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components';
 import Iframe from '../iframe';
 import Dropdown from '../dropdown'
@@ -67,17 +67,27 @@ color: ${props => props.theme.text};
 }
 `
 
-const TokenBreakdown = (chain, handleChange) => {
+const TokenBreakdown = () => {
   
-  // const isChain = (chain) => {
-  //     chain === "Arbitrum" ? true : false
-  //   }
-  
+  let chains = ["Arbitrum", "Avalanche"];
+
+  const [selectedChain, setSelectedChain] = useState("Arbitrum");
+
+
+  const handleValueChange = (e) => {
+    setSelectedChain(e.target.value);
+  };
+
+    useEffect = (() => {
+      return console.log(setSelectedChain);;
+     
+    }, [selectedChain]);
+
   return (
     <Section id="tokenbreakdown">
       <Title>Token Breakdown</Title>
       <SubTitle>Swaps</SubTitle>
-      <DropdownItem><Dropdown value={chain} onChange={handleChange}/>
+      <DropdownItem><Dropdown values={chains} onChange={handleValueChange}/>
       </DropdownItem>
     <Container>
     <Box>

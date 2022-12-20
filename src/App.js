@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect} from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
 import {dark} from './styles/Themes'
@@ -12,18 +12,6 @@ import ScrollToTop from './components/scrollToTop';
 
 function App() {
   
-
-  const getInicialState = () => {
-    const chain = "Arbitrum";
-    return chain;
-  }
-  const [chain, setChain] = useState(getInicialState);
-
-  const handleChange = (e) => {
-    setChain(e.target.chain);
-  };
-  console.log(chain);
-
   return (
     <>
      <GlobalStyles/>
@@ -32,7 +20,7 @@ function App() {
       {/* <FinancialMetrics/> */}
       <Engagement/>
       <Token/>
-      <TokenBreakdown chain={chain}/>
+      <TokenBreakdown/>
       <ScrollToTop/>
       <Footer/>
       </ThemeProvider>

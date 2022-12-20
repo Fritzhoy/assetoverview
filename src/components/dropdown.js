@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 
 
@@ -21,14 +21,21 @@ border: none;
     min-height: 20px;
     padding: 0px 2px 1px;
   }
+
 `;
 
-const Dropdown = ({chain, handleChange}) => {
+
+const Dropdown = ({values, handleValueChange}) => {
   
   return (
-    <Select value={chain} onChange={handleChange}>
-      <option value="Arbitrum">Arbitrum</option>
-      <option value="Avalanche">Avalanche</option>
+    <Select>
+      {values.map((value, index) => (
+        <option
+        onClick={(value) => handleValueChange(value)}
+        key={index}>
+          {value}
+        </option>
+      ))}
     </Select>
   )
 }
