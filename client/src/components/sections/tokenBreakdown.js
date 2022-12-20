@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-import Iframe from './iframe';
-import Dropdown from './dropdown'
+import Iframe from '../iframe';
+import Dropdown from '../dropdown'
 
 
 const Section = styled.section`

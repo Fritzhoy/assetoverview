@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Iframe from './iframe';
+import Iframe from '../iframe';
 
 const Section = styled.section`
 min-height: ${props => `calc(100vh - ${props.theme.navHeight})` };

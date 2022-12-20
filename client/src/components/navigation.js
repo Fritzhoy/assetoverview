@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Logo from './sections/Logo'
+import Logo from './logo'
 
 
 const Section = styled.section`
