@@ -1,6 +1,7 @@
 {
-  "name": "Asset-Overview",
+  "name": "AssetOverview",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
   "dependencies": {
     "@fontsource/philosopher": "^4.5.10",

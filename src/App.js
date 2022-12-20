@@ -22,7 +22,7 @@ function App() {
       <Token/>
       <TokenBreakdown/>
       <ScrollToTop/>
-      <Footer/>
+      {/* <Footer/> */}
       </ThemeProvider>
     </>
   );

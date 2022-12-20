@@ -12,11 +12,12 @@ background-color: ${props => props.theme.body};
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
+  background-color: ${props => props.theme.body};
   color: ${(props) => props.theme.text};
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto;
+  margin: auto;
   border-bottom: 2px solid ${(props) => props.theme.text};
   width: fit-content;
 `
@@ -35,10 +36,10 @@ min-height: 80vh;
 margin: 0 auto;
 display: grid;
 grid-template-rows: auto;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: 1fr;
+background-color: ${props => props.theme.body};
 grid-gap: 20px;
 border-bottom: 2px solid ${(props) => props.theme.text};
-padding-top: 20px;
 `
 const Box = styled.div`
 width: 100%;
@@ -48,6 +49,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+background-color: ${props => props.theme.body};
 `
 
 const Engagement = (chain) => {

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Iframe from '../iframe';
 import Dropdown from '../dropdown'
 
-
 const Section = styled.section`
 min-height: ${props => `calc(100vh - ${props.theme.navHeight})` };
 width: 100vw;
@@ -17,7 +16,7 @@ const Title = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto;
+  margin: auto;
   border-bottom: 2px solid ${(props) => props.theme.text};
   width: fit-content;
 `
@@ -37,7 +36,7 @@ margin: 0 auto;
 display: grid;
 border-bottom: 2px solid ${(props) => props.theme.text};
 grid-template-rows: auto;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: 1fr;
 grid-gap: 20px;
 padding-top: 40px;
 `
@@ -87,8 +86,8 @@ const TokenBreakdown = () => {
     <Section id="tokenbreakdown">
       <Title>Token Breakdown</Title>
       <SubTitle>Swaps</SubTitle>
-      <DropdownItem><Dropdown values={chains} onChange={handleValueChange}/>
-      </DropdownItem>
+      {/* <DropdownItem><Dropdown values={chains} onChange={handleValueChange}/>
+      </DropdownItem> */}
     <Container>
     <Box>
       <Iframe link="https://dune.com/embeds/1681834/2782691/34876269-4256-419c-92a7-c65bb114ecc1" title="[FEE] Swaps by Token"/>
