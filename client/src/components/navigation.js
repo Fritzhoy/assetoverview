@@ -11,7 +11,6 @@ const NavBar = styled.nav`
 display: flex;
 justify-content: space-between;
 align-items: center;
-
 width: 85%;
 height: ${props => props.theme.navHeight};
 margin: 0 auto;
@@ -41,15 +40,26 @@ cursor: pointer;
 `
 
 const Navigation = () => {
+
+  const scrollTo = (id) => {
+
+    let element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+
+    })
+  }
   return (
-   <Section>
+   <Section id="nav">
     <NavBar>
       <Logo/>
       <Menu>
-        <MenuItem>Financial Metrics</MenuItem>
-        <MenuItem>Engagement</MenuItem>
-        <MenuItem>Token</MenuItem>
-        <MenuItem>Token Breakdown</MenuItem>
+        <MenuItem onClick={() => scrollTo("financialMetrics")}>Financial Metrics</MenuItem>
+        <MenuItem onClick={() => scrollTo("engagement")}>Engagement</MenuItem>
+        <MenuItem onClick={() => scrollTo("token")}>Token</MenuItem>
+        <MenuItem onClick={() => scrollTo("tokenbreakdown")}>Token Breakdown</MenuItem>
       </Menu>
     </NavBar>
    </Section>

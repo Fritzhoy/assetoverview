@@ -10,7 +10,7 @@ background-color: ${props => props.theme.body};
 `
 
 const Title = styled.h1`
- font-size: ${(props) => props.theme.fontxxl};
+  font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
   color: ${(props) => props.theme.text};
   display: flex;
@@ -38,7 +38,7 @@ grid-template-rows: auto;
 grid-template-columns: 1fr 1fr;
 grid-gap: 20px;
 border-bottom: 2px solid ${(props) => props.theme.text};
-padding-top: 40px;
+padding-top: 20px;
 `
 const Box = styled.div`
 width: 100%;
@@ -52,7 +52,7 @@ align-items: center;
 
 const Engagement = (chain) => {
   return(
-    <Section>
+    <Section id="engagement">
       <Title>Engagement</Title>
       <Container>
         <Box>
@@ -62,10 +62,10 @@ const Engagement = (chain) => {
          <Iframe link="https://dune.com/embeds/1656158/2745504/2f8c0d08-774b-4642-b159-7656d0ca1e43" title="Weekly New Traders"/>
         </Box>
         </Container>
-        <SubTitle>GMX Token Holders</SubTitle>
-        <Container>
-        <Iframe link="https://dune.com/embeds/1688118/2791835/a9832bf2-1dba-4327-aa94-5dc1b0995aa8" title="GMX Token Holders"/> 
-        </Container>
+        <SubTitle>Daily GMX Token Holders</SubTitle>
+        <Box>
+        <Iframe link="https://dune.com/embeds/1781172/2935109/a823f1a0-b403-47dd-af08-7a7e1a404ee0" title="GMX Token Holders"/> 
+        </Box>
       </Section>
   )
 }

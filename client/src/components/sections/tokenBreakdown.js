@@ -68,8 +68,13 @@ color: ${props => props.theme.text};
 `
 
 const TokenBreakdown = (chain, handleChange) => {
+  
+  // const isChain = (chain) => {
+  //     chain === "Arbitrum" ? true : false
+  //   }
+  
   return (
-    <Section>
+    <Section id="tokenbreakdown">
       <Title>Token Breakdown</Title>
       <SubTitle>Swaps</SubTitle>
       <DropdownItem><Dropdown value={chain} onChange={handleChange}/>
@@ -89,6 +94,5 @@ const TokenBreakdown = (chain, handleChange) => {
     <Box> <Iframe link="https://dune.com/embeds/1681840/2782575/318288bb-2853-4474-8bde-f7ea9fedf412" title="Margin Trading Volume by Tokens"/></Box>
     </Container>
     </Section>
-  )
-}
+  )}
 export default TokenBreakdown

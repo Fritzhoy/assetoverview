@@ -47,15 +47,19 @@ const SubTitle = styled.h2`
 
 const Token = () => {
   return (
-    <Section>
+    <Section id="token">
       <Title>Token</Title>
       <SubTitle>GMX Token Market Cap</SubTitle>
       <Container>
       <Iframe link="https://dune.com/embeds/1780972/2934777/a1a00159-2ee8-4f24-a8d8-571f642540f6" title="GMX Weekly Market Cap"/>
     </Container>
-    <SubTitle>GMX Total Circulating Supply</SubTitle>
     <Container>
-    <Box><Iframe link="https://dune.com/embeds/1780972/2935362/51bf4c04-6709-4669-a99b-2276ab1bb3d5" title="Total Circulating Supply"/></Box>
+    <Box> <SubTitle>GMX Total Circulating Supply</SubTitle>
+      <Iframe link="https://dune.com/embeds/1780972/2935362/51bf4c04-6709-4669-a99b-2276ab1bb3d5" title="Total Circulating Supply"/>
+      </Box>
+      <Box> <SubTitle>24h GMX Price Change</SubTitle>
+      <Iframe link="https://dune.com/embeds/1780972/2934776/d269447d-b8f7-4031-9446-9ae20dfa0c01" title="GMX Price Change"/>
+      </Box> 
     </Container>
     </Section>
   )

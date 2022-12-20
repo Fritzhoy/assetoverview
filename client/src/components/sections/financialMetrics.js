@@ -39,7 +39,7 @@ background-color: yellow;
 
 const FinancialMetrics = () => {
   return(
-    <Section>
+    <Section id="financialMetrics">
       <Container>
         <Box></Box>
       </Container>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
 import {dark} from './styles/Themes'
@@ -8,9 +8,10 @@ import Engagement from './components/sections/engagement';
 import Token from './components/sections/token';
 import TokenBreakdown from './components/sections/tokenBreakdown';
 import Footer from './components/footer';
-
+import ScrollToTop from './components/scrollToTop';
 
 function App() {
+  
 
   const getInicialState = () => {
     const chain = "Arbitrum";
@@ -21,16 +22,18 @@ function App() {
   const handleChange = (e) => {
     setChain(e.target.chain);
   };
+  console.log(chain);
 
   return (
     <>
      <GlobalStyles/>
       <ThemeProvider theme={dark}>
-      <Navigation chain={chain} onChange={handleChange}/>
-      <FinancialMetrics/>
+      <Navigation/>
+      {/* <FinancialMetrics/> */}
       <Engagement/>
       <Token/>
       <TokenBreakdown chain={chain}/>
+      <ScrollToTop/>
       <Footer/>
       </ThemeProvider>
     </>
