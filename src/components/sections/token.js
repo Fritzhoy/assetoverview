@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Iframe from '../iframe';
+
 const Section = styled.section`
 min-height: ${props => `calc(100vh - ${props.theme.navHeight})` };
 width: 100vw;
@@ -24,7 +25,7 @@ justify-content: center;
 align-items: center;
 `
 const Title = styled.h1`
- font-size: ${(props) => props.theme.fontxxl};
+ font-size: ${(props) => props.theme.fontxl};
   text-transform: capitalize;
   color: ${(props) => props.theme.text};
   display: flex;

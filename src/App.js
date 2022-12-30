@@ -17,7 +17,7 @@ function App() {
      <GlobalStyles/>
       <ThemeProvider theme={dark}>
       <Navigation/>
-      {/* <FinancialMetrics/> */}
+      <FinancialMetrics/>
       <Engagement/>
       <Token/>
       <TokenBreakdown/>

@@ -10,7 +10,7 @@ background-color: ${props => props.theme.body};
 `
 
 const Title = styled.h1`
-  font-size: ${(props) => props.theme.fontxxl};
+  font-size: ${(props) => props.theme.fontxl};
   text-transform: capitalize;
   background-color: ${props => props.theme.body};
   color: ${(props) => props.theme.text};
